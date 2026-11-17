@@ -10,22 +10,38 @@
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="canonical" href="https://www.taco-heist.com/">
   <meta property="og:site_name" content="Taco Heist">
+  <meta property="og:title" content="Taco Heist | Westfield, IN">
+  <meta property="og:url" content="https://www.taco-heist.com/">
+  <meta property="og:type" content="website">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Taco Heist",
-      "alternateName": "Taco Heist: Guard Your Tacos!",
-      "description": "Authentic traditional Mexico City street tacos, botanas, bowls, and house-made salsas located inside the Westfield Collective, just one mile south of the Droplight Grand Park Sports Campus.",
-      "url": "https://www.taco-heist.com/",
-      "telephone": "+1-317-648-5424",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "750 E 181st St",
-        "addressLocality": "Westfield",
-        "addressRegion": "IN",
-        "postalCode": "46074"
-      }
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://www.taco-heist.com/#website",
+          "name": "Taco Heist",
+          "alternateName": "Taco Heist: Guard Your Tacos!",
+          "url": "https://www.taco-heist.com/"
+        },
+        {
+          "@type": "Restaurant",
+          "@id": "https://www.taco-heist.com/#restaurant",
+          "name": "Taco Heist",
+          "description": "Authentic traditional Mexico City street tacos, botanas, bowls, and house-made salsas located inside the Westfield Collective, just one mile south of the Droplight Grand Park Sports Campus.",
+          "url": "https://www.taco-heist.com/",
+          "telephone": "+1-317-648-5424",
+          "servesCuisine": "Mexican",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "750 E 181st St",
+            "addressLocality": "Westfield",
+            "addressRegion": "IN",
+            "postalCode": "46074",
+            "addressCountry": "US"
+          }
+        }
+      ]
     }
   </script>
   <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-P6GP3KF7"></script>
@@ -41,8 +57,8 @@
   <header class="site-header">
     <nav aria-label="Main Navigation">
       <div class="brand">
-        <a href="#hero" aria-label="Taco Heist Home">
-          <img src="images/th_company_logo.webp" alt="Taco Heist Logo">
+        <a href="/" aria-label="Taco Heist Home">
+          <img src="images/th_company_logo.webp" alt="Taco Heist">
         </a>
       </div>
       <div class="links">
