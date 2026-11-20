@@ -73,7 +73,7 @@ const menuData = [
                 "name": "Campechano (Steak & Chorizo)",
                 "price": "$4.50",
                 "description": "High-heat seared citrus-marinated skirt steak with crispy chorizo"
-            },,
+            },
             {
                 "number": "11",
                 "name": "STREET TACO TRIO (MIX & MATCH ANY 3)",
