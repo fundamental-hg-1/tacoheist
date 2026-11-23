@@ -162,56 +162,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   }
-
-  // Order Modal Logic
-  const orderUrl = "https://order.toasttab.com/online/taco-heist-westfield";
-  const modal = document.getElementById("orderModal");
-  const proceedBtn = document.getElementById("proceedOrderBtn");
-  const cancelBtn = document.getElementById("cancelOrderBtn");
-  let lastFocusedTrigger = null;
-
-  const closeModal = () => {
-    if (modal) modal.classList.remove("active");
-    if (lastFocusedTrigger && typeof lastFocusedTrigger.focus === "function") {
-      lastFocusedTrigger.focus();
-    }
-  };
-
-  document.querySelectorAll(".order-popup-trigger, .order-trigger").forEach((trigger) => {
-    trigger.addEventListener("click", (e) => {
-      e.preventDefault();
-      lastFocusedTrigger = trigger;
-      if (modal) {
-        modal.classList.add("active");
-        if (proceedBtn) proceedBtn.focus();
-      }
-    });
-  });
-
-  if (proceedBtn) {
-    proceedBtn.addEventListener("click", () => {
-      closeModal();
-      window.open(orderUrl, "_blank", "noopener,noreferrer");
-    });
-  }
-
-  if (cancelBtn) {
-    cancelBtn.addEventListener("click", closeModal);
-  }
-
-  if (modal) {
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        closeModal();
-      }
-    });
-  }
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modal && modal.classList.contains("active")) {
-      closeModal();
-    }
-  });
 });
 
 function escapeHtml(str) {

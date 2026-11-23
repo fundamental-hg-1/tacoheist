@@ -89,11 +89,11 @@ button {
   letter-spacing: 0.08em;
 }
 
-.site-header nav .links a {
+.site-header nav .links a:not(.btn) {
   transition: color 0.2s ease;
 }
 
-.site-header nav .links a:hover {
+.site-header nav .links a:not(.btn):hover {
   color: var(--gold);
 }
 
@@ -116,6 +116,7 @@ button {
 .btn:hover {
   background: var(--gold-light);
   border-color: var(--gold-light);
+  color: #14100b;
 }
 
 .btn-nav {
@@ -132,6 +133,7 @@ button {
 .btn-outline:hover {
   background: rgba(255, 255, 255, 0.1);
   border-color: var(--cream);
+  color: var(--cream);
 }
 
 /* Hero Section */
@@ -183,7 +185,27 @@ p {
   font-size: clamp(15.5px, 2vw, 18.5px);
   color: #dfd4c3;
   max-width: 580px;
+  margin: 0 0 18px;
+}
+
+.hero-badge-wrap {
   margin: 0 0 26px;
+}
+
+.hero-dietary-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 1.5px solid var(--gold);
+  background: rgba(255, 195, 79, 0.14);
+  color: var(--gold-light);
+  font-size: 12.5px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.45);
 }
 
 .actions {
@@ -709,71 +731,6 @@ h2 {
   letter-spacing: 0.04em;
 }
 
-/* Order Redirect Modal */
-.order-modal-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.78);
-  z-index: 1000;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-}
-
-.order-modal-overlay.active {
-  display: flex;
-}
-
-.order-modal-content {
-  background: #18130d;
-  color: var(--cream);
-  border: 1px solid var(--gold);
-  border-radius: 14px;
-  padding: 34px 30px;
-  max-width: 460px;
-  width: 100%;
-  text-align: center;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
-}
-
-.modal-badge {
-  display: inline-block;
-  border: 1px solid rgba(255, 195, 79, 0.4);
-  color: var(--gold);
-  border-radius: 999px;
-  padding: 4px 12px;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  margin-bottom: 14px;
-}
-
-.order-modal-content h3 {
-  color: var(--gold);
-  font-size: 20px;
-  margin: 0 0 14px;
-}
-
-.order-modal-content p {
-  color: #dfd4c3;
-  font-size: 14.5px;
-  line-height: 1.6;
-  margin: 0 0 24px;
-}
-
-.modal-actions {
-  display: flex;
-  gap: 12px;
-}
-
-.modal-actions .btn {
-  flex: 1;
-  padding: 13px 16px;
-}
-
 /* ==========================================================================
    Taco Heist — Blog Hub & Individual Post Styling
    ========================================================================== */
@@ -1013,14 +970,85 @@ h2 {
     padding: 36px 16px 44px;
   }
 
-  .pill {
+  .pill,
+  .hero-dietary-badge {
     font-size: 11px;
-    padding: 6px 12px;
+    padding: 7px 13px;
   }
 
   .footer-bottom {
     flex-direction: column;
     text-align: center;
     justify-content: center;
+  }
+}
+
+/* Order CTA Subtext Below Button ("Order via Toast") */
+.order-cta-wrap {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.order-cta-sub {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  color: var(--muted);
+  text-transform: none;
+}
+
+.order-cta-nav {
+  gap: 3px;
+}
+
+.order-cta-nav .order-cta-sub {
+  font-size: 10px;
+}
+
+.actions {
+  align-items: flex-start;
+}
+
+.menu-cta-bar {
+  margin-top: 34px;
+}
+
+.visit-card-cta {
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+.order-cta-full {
+  display: flex;
+  width: 100%;
+}
+
+.order-cta-full .btn {
+  width: 100%;
+}
+
+.footer-links {
+  align-items: flex-start;
+}
+
+.order-cta-footer {
+  gap: 3px;
+}
+
+.footer-order-link {
+  color: var(--gold);
+}
+
+.order-cta-footer .order-cta-sub {
+  font-size: 10.5px;
+}
+
+@media (max-width: 640px) {
+  .order-cta-nav .order-cta-sub {
+    font-size: 9.5px;
   }
 }

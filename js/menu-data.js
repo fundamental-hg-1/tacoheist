@@ -90,7 +90,7 @@ const menuData = [
                 "number": "13",
                 "name": "Proteins",
                 "price": "Choice",
-                "description": "Pollo Al Carbon (Chicken), Carnitas (Pork), Carne Asada (Steak) +$2.00, Campechano (Steak & Chorizo) +$2.50, or Pescado (Fish) +$3.00."
+                "description": "Pollo Al Carbon (Chicken), Carnitas (Pork), Carne Asada (Steak) +$2.00, or Campechano (Steak & Chorizo) +$2.50"
             },
             {
                 "number": "14",

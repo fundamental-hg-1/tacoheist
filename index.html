@@ -66,7 +66,10 @@
         <a href="#story">STORY</a>
         <a href="#visit">VISIT</a>
         <a href="blog/index.html">BLOG</a>
-        <button type="button" class="btn btn-nav order-popup-trigger">ORDER ONLINE</button>
+        <div class="order-cta-wrap order-cta-nav">
+          <a href="https://order.toasttab.com/online/taco-heist-westfield" target="_blank" rel="noopener noreferrer" class="btn btn-nav" aria-label="Order Online — Order via Toast">ORDER ONLINE</a>
+          <span class="order-cta-sub">Order via Toast</span>
+        </div>
       </div>
     </nav>
   </header>
@@ -79,9 +82,15 @@
       <h1 class="eyebrow">TACO HEIST</h1>
       <h2 class="hero-title">GUARD YOUR <br>TACOS.</h2>
       <p class="hero-subtitle">Authentic Traditional Mexico City Street Tacos &amp; Botanas</p>
+      <div class="hero-badge-wrap">
+        <span class="hero-dietary-badge">&#9889; 100% GLUTEN-FREE &amp; NUT-FREE MENU</span>
+      </div>
       <div class="actions">
-        <a href="#menu" class="btn">EXPLORE THE MENU</a>
-        <a href="#visit" class="btn btn-outline">VISIT US</a>
+        <div class="order-cta-wrap">
+          <a href="https://order.toasttab.com/online/taco-heist-westfield" target="_blank" rel="noopener noreferrer" class="btn" aria-label="Order Online — Order via Toast">ORDER ONLINE</a>
+          <span class="order-cta-sub">Order via Toast</span>
+        </div>
+        <a href="#menu" class="btn btn-outline">EXPLORE THE MENU</a>
       </div>
     </div>
   </section>
@@ -100,6 +109,13 @@
 
     <!-- Dynamic Menu Container populated via js/main.js -->
     <div id="menu-container" class="menu-grid" aria-live="polite"></div>
+
+    <div class="menu-cta-bar center">
+      <div class="order-cta-wrap">
+        <a href="https://order.toasttab.com/online/taco-heist-westfield" target="_blank" rel="noopener noreferrer" class="btn" aria-label="Order Online — Order via Toast">ORDER ONLINE</a>
+        <span class="order-cta-sub">Order via Toast</span>
+      </div>
+    </div>
 
     <p class="small center menu-disclaimer">Menu and pricing are subject to change. Please tell our team about allergies before ordering.</p>
   </section>
@@ -160,6 +176,12 @@
             <strong>Phone:</strong> <a href="tel:+13176485424" class="contact-link">+1 (317) 648-5424</a><br>
             <strong>Email:</strong> <a href="mailto:inquiry@fundamental-hg.com" class="contact-link">inquiry@fundamental-hg.com</a>
           </p>
+          <div class="visit-card-cta">
+            <div class="order-cta-wrap order-cta-full">
+              <a href="https://order.toasttab.com/online/taco-heist-westfield" target="_blank" rel="noopener noreferrer" class="btn" aria-label="Order Online — Order via Toast">ORDER ONLINE</a>
+              <span class="order-cta-sub">Order via Toast</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -178,14 +200,17 @@
         <a href="#story">STORY</a>
         <a href="#visit">VISIT</a>
         <a href="blog/index.html">BLOG</a>
-        <a href="#hero" class="order-popup-trigger">ORDER ONLINE</a>
+        <div class="order-cta-wrap order-cta-footer">
+          <a href="https://order.toasttab.com/online/taco-heist-westfield" target="_blank" rel="noopener noreferrer" class="footer-order-link" aria-label="Order Online — Order via Toast">ORDER ONLINE</a>
+          <span class="order-cta-sub">Order via Toast</span>
+        </div>
       </nav>
 
       <div class="sibling-concepts">
         <span class="concepts-label">Explore our other concepts:</span>
-        <a href="https://www.pisocietypizza.com" target="_blank" rel="noopener noreferrer" class="concept-link" title="Pi Society Pizza">Pi Society Pizza</a>
-        <a href="https://www.smashngrab-burgers.com" target="_blank" rel="noopener noreferrer" class="concept-link" title="Smash &amp; Grab Burgers">Smash &amp; Grab Burgers</a>
-        <a href="https://www.bowloutrn.com" target="_blank" rel="noopener noreferrer" class="concept-link" title="Bowl Out Rice and Noodles">Bowl Out Rice and Noodles</a>
+        <a href="https://www.pisocietypizza.com" target="_blank" rel="noopener noreferrer" class="concept-link" title="Pi Society Pizza (Westfield, IN)">Pi Society Pizza (Westfield, IN)</a>
+        <a href="https://www.smashngrab-burgers.com" target="_blank" rel="noopener noreferrer" class="concept-link" title="Smash &amp; Grab Burgers (Westfield, IN)">Smash &amp; Grab Burgers (Westfield, IN)</a>
+        <a href="https://www.bowloutrn.com" target="_blank" rel="noopener noreferrer" class="concept-link" title="Bowl Out Rice and Noodles (Liberty Township, OH)">Bowl Out Rice and Noodles (Liberty Township, OH)</a>
       </div>
 
       <div class="legal-links">
@@ -195,23 +220,10 @@
 
       <div class="footer-bottom">
         <span>&copy; <span id="year">2026</span> Taco Heist &bull; Fundamental Hospitality Group. All rights reserved.</span>
-        <span>100% Gluten-Free &amp; Nut-Free Kitchen.</span>
+        <span>100% Gluten-Free &amp; Nut-Free Menu.</span>
       </div>
     </div>
   </footer>
-
-  <!-- ORDER REDIRECT MODAL -->
-  <div id="orderModal" class="order-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
-    <div class="order-modal-content">
-      <span class="modal-badge">SECURE PORTAL</span>
-      <h3 id="orderModalTitle">REDIRECTING TO ORDERING PORTAL</h3>
-      <p>You are now leaving the Taco Heist site and being redirected to the secure online ordering portal for Westfield Collective.</p>
-      <div class="modal-actions">
-        <button type="button" id="proceedOrderBtn" class="btn">CONTINUE TO ORDER</button>
-        <button type="button" id="cancelOrderBtn" class="btn btn-outline">CANCEL</button>
-      </div>
-    </div>
-  </div>
 
   <!-- SCRIPTS -->
   <script defer src="js/menu-data.js"></script>
